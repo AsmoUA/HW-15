@@ -1882,19 +1882,59 @@ html {
 
     }
 }
-
 @media screen and (max-width: 768px){
     .burger {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        /* transition: all .5s ease-in-out; */
         top: 0px;
         left: 97%;
     }
 
-    .menu__1, .menu__2, .menu__3{
+    .menu {
         width: 15px;
         height: 2px;
         background-color: #1B1D1F;
+        border-radius: 5px;
         display: block;
-        margin-bottom: 4px;
+    }
+
+    .menu::before,
+    .menu::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background-color: #1B1D1F;
+        border-radius: 5px;
+        display: block;
+    }
+
+    .menu::before {
+        transform: translateY(-4px);
+    }
+
+    .menu::after {
+        transform: translateY(4px);
+    }
+
+    .menu:hover::before {
+        transition: all .5s linear;
+        transform: rotate(-90deg);
+    }
+
+    .menu:hover::after {
+        transition: all .01s linear;
+        width: 0;
+    }
+
+    .menu:hover {
+        transition: all .5s linear;
+        transform: rotate(45deg);
     }
 }
