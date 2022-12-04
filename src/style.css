@@ -1926,15 +1926,18 @@ html {
     .menu:hover::before {
         transition: all .5s linear;
         transform: rotate(-90deg);
+        background-color: #46B1DE;
     }
 
     .menu:hover::after {
         transition: all .01s linear;
         width: 0;
+        background-color: #46B1DE;
     }
 
     .menu:hover {
         transition: all .5s linear;
         transform: rotate(45deg);
+        background-color: #46B1DE;
     }
 }
